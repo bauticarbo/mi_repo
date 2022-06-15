@@ -25,7 +25,7 @@ a{
 }
 
 /* header y nav */
-header{
+/*header{ 
     display: block;
     position: fixed;
     top: 0%;
@@ -74,19 +74,20 @@ header{
 .header__menuBurguer{
     display: none;
 }
-
+*/
 
 /* main */
 /* index */
 .mainIndex{
     display: inline-block;
-    position: absolute;
+    position: relative;
     top: 40vh;
     left: 2vw;
     width: 100vw;
-    height: 85vh;
-  
-   
+    height: 85vh; 
+}
+.bodyIndex{
+    overflow: hidden;
 }
 .textoBienvenida{
     font-size: 8vh;
@@ -154,7 +155,7 @@ header{
 
 /* nosotros */
 .mainNosotros{
-    position: absolute;
+    position: relative;
     top: 30%;
     width: 100vw;
     height: 40vh;
@@ -175,9 +176,21 @@ header{
 
 /* galeria */
 .mainGaleria{
-    position: absolute;
+    display: flex;
+    justify-content: center;
+   /* position: relative;
     top: 10vh;
+    height: 100vh;*/
 }
+.carousel{
+    width: 60vw;
+    height: 80vh;
+}
+ .carousel-item img{ 
+    display: inline-block;
+    height: 90vh;
+    width: 50vh;
+}/*
 .mainGaleria article{
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
@@ -216,11 +229,11 @@ header{
 }
 .mainGaleria__img9{
     grid-area: img9;
-}
+}*/
 
-
+/*
 .mainGaleria img{
-    /*display: inline-block;*/
+    display: inline-block;
     border: 2px solid black;
     margin: 2vw;
 }
@@ -231,12 +244,17 @@ header{
     font-weight: bolder;
     margin-left: 5vw;
 }
-
+*/
 /* contactanos */
+
 .mainContactanos{
     display: block;
     position: relative;
     top: 20vh;
+}
+.mainContactanos h1{
+    font-weight: bolder;
+    margin-left: 5vw;
 }
 .mainContactanos form{
     margin-top: 10vh;
@@ -250,21 +268,21 @@ header{
 /* footer */
 footer{
     display: inline-block;
-    position: absolute;
+    position: relative;
     bottom: 0vh;
     text-align: center;
     width: 100vw;
     height: 5vh;
     font-weight: bolder;
 }
-.footerNP{
+/* .footerNP{
     position: absolute;
     top: 210vh;
 }
 .footerGaleria{
     position: absolute;
     top: 230vh;
-}
+} */
 
 @media screen and (max-width:320px) {
     .header__nav{
@@ -273,12 +291,12 @@ footer{
     header{
         background-color: white;
     }
-    .header__menuBurguer{
+    /* .header__menuBurguer{ 
         display: inline-block;
         height: 8vh;
         position: fixed;
         right:2vw;
-    }
+    }*/
     .mainGaleria article{
         display: grid;
         grid-template-columns: 45vw 45vw;
