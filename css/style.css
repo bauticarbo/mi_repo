@@ -6,7 +6,9 @@
 
 /* body */
 body{
-    overflow: auto;
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
 }
 .bodyIndex{
@@ -76,6 +78,26 @@ a{
 }
 */
 
+.linkNav{
+    background-color: rgba(196, 152, 103, 0.7);
+    border: solid 1px rgb(212, 212, 212);
+    border-radius: 20px;
+    margin: 10px 20px 0px 20px;
+    padding: 2px 7px 2px 7px;
+    height: 7vh;
+
+}
+.linkNav:hover{
+    transform: scale(1.2,1.2);
+    background-color: rgba(139, 95, 44, 0.7);;
+}
+.linkNav:active{
+    transform: scale(1.1,1.1);
+}
+.linkActual{
+    background-color: rgba(139, 95, 44, 0.7);;
+}
+
 /* main */
 /* index */
 .mainIndex{
@@ -124,6 +146,7 @@ a{
     /*top: 40vh;*/
     width: 100vw;
     height: 50vh;
+
 }
 
 .platosDeSitio{
@@ -161,6 +184,7 @@ a{
     height: 40vh;
 }
 .mainNosotros h1{
+    position: relative;
     margin-top: 0px;
     margin-left: 4vw;
     font-weight: bolder;
@@ -190,7 +214,14 @@ a{
     display: inline-block;
     height: 90vh;
     width: 50vh;
-}/*
+}
+.mainGaleria{
+    position: relative;
+    top: 15vh;
+}
+
+
+/*
 .mainGaleria article{
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
@@ -247,12 +278,21 @@ a{
 */
 /* contactanos */
 
-.mainContactanos{
+ .mainContactanos{
     display: block;
     position: relative;
     top: 20vh;
+    left: 5vw;
 }
 .mainContactanos h1{
+    font-weight: bolder;
+
+}
+input:focus, textarea:focus{
+    transform: scale(1.05, 1.05);
+}
+
+/*.mainContactanos h1{
     font-weight: bolder;
     margin-left: 5vw;
 }
@@ -263,40 +303,51 @@ a{
 }
 .mainContactanos legend{
     font-size: 25px;
-}
+} */
  
 /* footer */
 footer{
     display: inline-block;
     position: relative;
-    bottom: 0vh;
     text-align: center;
     width: 100vw;
     height: 5vh;
     font-weight: bolder;
 }
-/* .footerNP{
-    position: absolute;
-    top: 210vh;
+ .footerNP{
+    position: relative;
+    top: 40vh;
 }
+.footerNosotros{
+    position: absolute;
+    top: 95vh;
+}
+.footerContactanos{
+    position: absolute;
+    top: 130vh; 
+}
+ .footerIndex{
+    top: 10vh;
+
+} 
 .footerGaleria{
     position: absolute;
-    top: 230vh;
-} */
+    top: 110vh;
+} 
 
 @media screen and (max-width:320px) {
-    .header__nav{
+    /* .header__nav{
         display: none;
     }
     header{
         background-color: white;
-    }
-    /* .header__menuBurguer{ 
+    } 
+     .header__menuBurguer{ 
         display: inline-block;
         height: 8vh;
         position: fixed;
         right:2vw;
-    }*/
+    }
     .mainGaleria article{
         display: grid;
         grid-template-columns: 45vw 45vw;
@@ -309,10 +360,20 @@ footer{
          "img9 none";
         position: relative;
         margin-left: 6vw;
-        top: 28vh;}
+        top: 28vh;}*/
+    .carousel{
+    width: 60vw;
+    height: 70vh; 
+    top:5vh; 
+    }
+    .carousel-item img{ 
+    display: inline-block;
+    height: 70vh;
+    width: 60vw;
+    }
     .footerGaleria{
      position: relative;
-     top:180vh;
+     top:30vh;
     }
 
     .mainNuestrosProductos section{
@@ -330,7 +391,10 @@ footer{
         height: 70vw;
     }
     .footerNP{
-        top: 500vh;
+        top: 50vh;
+    }
+    .footerContactanos{
+        top: 40vh;
     }
 
 }
