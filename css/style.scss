@@ -1,0 +1,259 @@
+/*normalize*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* body*/
+  body{
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+.bodyIndex{
+    overflow: hidden;
+    background-image: url(../images/fondo-index.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vh auto;
+    background-position: 100% 0%;
+}
+
+/* enlaces*/
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* header y nav */
+.linkNav{
+    background-color: rgba(196, 152, 103, 0.7);
+    border: solid 1px rgb(212, 212, 212);
+    border-radius: 20px;
+    margin: 10px 20px 0px 20px;
+    padding: 2px 7px 2px 7px;
+    height: 7vh;
+    &:hover{
+        transform: scale(1.2,1.2);
+        background-color: rgba(139, 95, 44, 0.7);;
+    }
+    &:active{
+        transform: scale(1.1,1.1);
+    }
+}
+.linkActual{
+    background-color: rgba(139, 95, 44, 0.7);;
+}
+.navPers{
+    display: flex;
+    justify-content: space-evenly;
+}
+.navIcono{
+    font-weight: bolder;
+}
+/* main */
+/* index */
+.mainIndex{
+    display: inline-block;
+    position: relative;
+    top: 40vh;
+    left: 2vw;
+    width: 100vw;
+    height: 85vh; 
+}
+.textoBienvenida{
+    font-size: 8vh;
+    display: inline-block;
+    position: relative;
+    background-color: rgba(196, 152, 103, 0.7);
+    width: 65vw;
+    height: 30vh;
+}
+
+/* productos */
+.tituloNP{
+    font-weight: bolder;
+    display: inline-block;
+    position: relative;
+    top: 20vh;
+    margin-left: 5vw;
+}
+.mainNuestrosProductos{ 
+    section{
+        display: grid;
+        row-gap: 5vh;
+        position: relative;
+        top: 30vh;
+        grid-template-columns: 100vw;
+        grid-template-rows: 55vh 55vh 55vh;
+        grid-template-areas: "borlas" "platosDeSitio" "centrosDeMesa";
+    }
+    img{
+        width: 10vw;
+        margin: 2vw 0vw 2vw 0vw;
+        padding: 5vw;
+        border: solid 1px black;
+    }
+}
+.borlas{
+    grid-area: borlas;
+    display: flex;
+    justify-content:space-around;
+    position: relative;
+    /*top: 40vh;*/
+    width: 100vw;
+    height: 50vh;
+
+}
+
+.platosDeSitio{
+    grid-area: platosDeSitio;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    /*top: 40vh;*/
+    width: 100vw;
+    height: 50vh;
+    /* margin-top: 5vh; */
+}
+.centrosDeMesa{
+    grid-area: centrosDeMesa;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+}
+
+/* nosotros */
+.mainNosotros{
+    position: relative;
+    top: 30%;
+    width: 100vw;
+    height: 40vh;
+    h1{
+        position: relative;
+        margin-top: 0px;
+        margin-left: 4vw;
+        font-weight: bolder;
+    }
+    p {
+        margin-top: 10vh;
+        margin-left: 5vw;
+        width: 80vw;
+        height: 40vh;
+        background-color: #F1DCA7;
+    }
+}
+
+/* galeria */
+.mainGaleria{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 15vh;
+}
+.carousel{
+    width: 60vw;
+    height: 80vh;
+}
+ .carousel-item{
+        img{ 
+            display: inline-block;
+            height: 90vh;
+            width: 50vh;
+        }
+}
+
+/* contactanos */
+
+.mainContactanos{
+    display: block;
+    position: relative;
+    top: 20vh;
+    left: 5vw;
+    h1{
+        font-weight: bolder;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+input:focus, textarea:focus{
+    transform: scale(1.05, 1.05);
+}
+
+/* footer */
+footer{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    height: 5vh;
+    font-weight: bolder;
+}
+ .footerNP{
+    position: relative;
+    top: 40vh;
+}
+.footerNosotros{
+    position: absolute;
+    top: 95vh;
+}
+.footerContactanos{
+    position: absolute;
+    top: 130vh; 
+}
+ .footerIndex{
+    top: 10vh;
+} 
+.footerGaleria{
+    position: absolute;
+    top: 110vh;
+} 
+
+@media screen and (max-width:320px) {
+
+    .carousel{
+    width: 60vw;
+    height: 70vh; 
+    top:5vh; 
+    }
+    .carousel-item{
+        img{ 
+            display: inline-block;
+            height: 70vh;
+            width: 60vw;
+        }    
+    }
+
+    .mainNuestrosProductos{
+        section{
+            grid-template-rows: 150vh 150vh 150vh;
+            align-items: stretch;
+        }
+        img{
+            width: 70vw;
+            height: 70vw;
+        }
+    }
+    .borlas, .centrosDeMesa, .platosDeSitio{
+        height: 150vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .footerNP{
+        top: 50vh;
+    }
+    .footerContactanos{
+        top: 40vh;
+    }
+    .footerGaleria{
+     position: relative;
+     top:30vh;
+    }
+
+}
