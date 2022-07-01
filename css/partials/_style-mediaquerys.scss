@@ -1,0 +1,42 @@
+@import "mixins";
+
+@media screen and (max-width:320px) {
+
+    .carousel{
+        @include sizes(60vw, 70vh);
+        top:5vh; 
+    }
+    .carousel-item{
+        img{ 
+            display: inline-block;
+            @include sizes(60vw, 70vh);
+        }    
+    }
+
+    .mainNuestrosProductos{
+        section{
+            grid-template-rows: 150vh 150vh 150vh;
+            align-items: stretch;
+        }
+        img{
+            @include sizes(70vw, 70vw);
+        }
+    }
+    .borlas, .centrosDeMesa, .platosDeSitio{
+        height: 150vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .footerNP{
+        top: 50vh;
+    }
+    .footerContactanos{
+        top: 40vh;
+    }
+    .footerGaleria{
+     position: relative;
+     top:30vh;
+    }
+
+}

@@ -1,0 +1,19 @@
+.mainGaleria{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 15vh;
+}
+.carousel{
+    @include sizes(60vw, 80vh);
+}
+ .carousel-item{
+        img{ 
+            display: inline-block;
+            @include sizes(50vh, 90vh);
+        }
+}
+.footerGaleria{
+    position: absolute;
+    top: 110vh;
+} 

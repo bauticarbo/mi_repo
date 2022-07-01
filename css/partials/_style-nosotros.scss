@@ -1,0 +1,23 @@
+@import "mixins";
+
+.mainNosotros{
+    position: relative;
+    top: 25vh;
+    @include sizes(100vw, 40vh);
+    h1{
+        position: relative;
+        margin-top: 0px;
+        margin-left: 4vw;
+        font-weight: bolder;
+    }
+    p {
+        margin-top: 10vh;
+        margin-left: 5vw;
+        @include sizes(80vw, 40vh);
+        background-color: #F1DCA7;
+    }
+}
+.footerNosotros{
+    position: absolute;
+    top: 95vh;
+}

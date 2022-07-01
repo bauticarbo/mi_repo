@@ -1,0 +1,21 @@
+.mainContactanos{
+    display: block;
+    position: relative;
+    top: 20vh;
+    left: 5vw;
+    h1{
+        font-weight: bolder;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+input:focus, textarea:focus{
+    transform: scale(1.05, 1.05);
+}
+.footerContactanos{
+    position: absolute;
+    top: 130vh; 
+}
