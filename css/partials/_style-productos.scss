@@ -7,45 +7,40 @@
     top: 20vh;
     margin-left: 5vw;
 }
-.mainNuestrosProductos{ 
+.mainNuestrosProductos{
+
     section{
+        font-weight: bolder;
         display: grid;
         row-gap: 5vh;
         position: relative;
         top: 30vh;
         grid-template-columns: 100vw;
-        grid-template-rows: 55vh 55vh 55vh;
-        grid-template-areas: "borlas" "platosDeSitio" "centrosDeMesa";
-    }
-    img{
-        width: 10vw;
-        margin: 2vw 0vw 2vw 0vw;
-        padding: 5vw;
-        border: solid 1px black;
-    }
-}
-.borlas{
-    grid-area: borlas;
-    display: flex;
-    justify-content:space-around;
-    position: relative;
-    @include sizes(100vw, 50vh);
+        grid-template-rows: 60vh 60vh 60vh;
+        grid-template-areas: "platosDeSitio" "centrosDeMesa" "borlas";
+        .borlas{
+            grid-area: borlas;
+            display: flex;
+            justify-content:space-around;
+            //position: relative;
+            @include sizes(100vw, 50vh);
+            img{
+                margin-top: 20px;
+            }
+        }
+        .platosDeSitio{
+            grid-area: platosDeSitio;
+            @extend .borlas;
+        }
+        .centrosDeMesa{
+            grid-area: centrosDeMesa;
+            @extend .borlas;
+        }
+    }   
 }
 
-.platosDeSitio{
-    grid-area: platosDeSitio;
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    @include sizes(100vw, 50vh);
-}
-.centrosDeMesa{
-    grid-area: centrosDeMesa;
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    @include sizes(100vw, 50vh);
-}
+
+
 .footerNP{
     position: relative;
     top: 40vh;

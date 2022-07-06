@@ -2,41 +2,56 @@
 
 @media screen and (max-width:320px) {
 
+    body{
+        width: 100vw;
+    }
     .carousel{
-        @include sizes(60vw, 70vh);
+        @include sizes(90vw, 90vw);
         top:5vh; 
     }
     .carousel-item{
         img{ 
             display: inline-block;
-            @include sizes(60vw, 70vh);
+            @include sizes(90vw, 90vw);
         }    
     }
 
     .mainNuestrosProductos{
         section{
-            grid-template-rows: 150vh 150vh 150vh;
-            align-items: stretch;
+            display: flex;
+            flex-direction: column;
+            height: 450vh;
         }
         img{
             @include sizes(70vw, 70vw);
         }
+        .borlas{
+            bottom: 0px;
+        }
+        .borlas, .platosDeSitio, .centrosDeMesa{
+            display: flex;
+            flex-direction: column;     
+            height: 140vh;
+            align-items: center;
+        }
     }
-    .borlas, .centrosDeMesa, .platosDeSitio{
-        height: 150vh;
+
+    .redes{
         flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
+        width: 48px;
+        right: 0px;
+        align-items: end;
     }
+
     .footerNP{
-        top: 50vh;
+        top: 10vh;
     }
     .footerContactanos{
         top: 40vh;
     }
     .footerGaleria{
      position: relative;
-     top:30vh;
+     top: 40vh;
     }
 
 }

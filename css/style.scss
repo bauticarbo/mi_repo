@@ -4,7 +4,7 @@
 @import "partials/style-galeria";
 @import "partials/style-contactanos";
 @import "partials/map-colores";
-
+@import "partials/style-mediaquerys";
 /*normalize*/
 *{
     padding: 0px;
@@ -26,13 +26,16 @@ a{
 }
 
 /* header y nav */
+.navColor{
+    background-color: blueviolet;
+}
 .linkNav{
     background-color: rgba(196, 152, 103, 0.7);
     border: solid 1px rgb(212, 212, 212);
     border-radius: 20px;
     margin: 10px 20px 0px 20px;
     padding: 2px 7px 2px 7px;
-    height: 7vh;
+    height: 40px;
     &:hover{
         transform: scale(1.2,1.2);
         background-color: rgba(139, 95, 44, 0.7);;
@@ -61,8 +64,7 @@ a{
     right: 0px;
     bottom: 0px;
     .facebook {
-        width: 48px;
-        height: 48px;
+        @include sizes(48px, 48px);
         border-radius: 50%;
         background-color: map-get($redes, facebook);
     }
@@ -74,6 +76,9 @@ a{
         @extend .facebook;
         background-color: map-get($redes, instagram);
     }
+    a{
+        @include sizes(48px, 48px)
+    }
 }
 
 /* footer */
@@ -81,7 +86,6 @@ footer{
     display: inline-block;
     position: relative;
     text-align: center;
-    width: 100vw;
-    height: 5vh;
+    @include sizes(100vw, 5vh);
     font-weight: bolder;
 }

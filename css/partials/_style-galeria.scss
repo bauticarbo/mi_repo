@@ -5,12 +5,12 @@
     top: 15vh;
 }
 .carousel{
-    @include sizes(60vw, 80vh);
+    @include sizes(40vw, 40vw);
 }
  .carousel-item{
         img{ 
             display: inline-block;
-            @include sizes(50vh, 90vh);
+            @include sizes(40vw, 40vw);
         }
 }
 .footerGaleria{

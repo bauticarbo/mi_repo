@@ -37,46 +37,30 @@
 }
 
 .mainNuestrosProductos section {
+  font-weight: bolder;
   display: grid;
   row-gap: 5vh;
   position: relative;
   top: 30vh;
   grid-template-columns: 100vw;
-  grid-template-rows: 55vh 55vh 55vh;
-  grid-template-areas: "borlas" "platosDeSitio" "centrosDeMesa";
+  grid-template-rows: 60vh 60vh 60vh;
+  grid-template-areas: "platosDeSitio" "centrosDeMesa" "borlas";
 }
-.mainNuestrosProductos img {
-  width: 10vw;
-  margin: 2vw 0vw 2vw 0vw;
-  padding: 5vw;
-  border: solid 1px black;
-}
-
-.borlas {
+.mainNuestrosProductos section .borlas, .mainNuestrosProductos section .centrosDeMesa, .mainNuestrosProductos section .platosDeSitio {
   grid-area: borlas;
   display: flex;
   justify-content: space-around;
-  position: relative;
   width: 100vw;
   height: 50vh;
 }
-
-.platosDeSitio {
+.mainNuestrosProductos section .borlas img, .mainNuestrosProductos section .centrosDeMesa img, .mainNuestrosProductos section .platosDeSitio img {
+  margin-top: 20px;
+}
+.mainNuestrosProductos section .platosDeSitio {
   grid-area: platosDeSitio;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  width: 100vw;
-  height: 50vh;
 }
-
-.centrosDeMesa {
+.mainNuestrosProductos section .centrosDeMesa {
   grid-area: centrosDeMesa;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  width: 100vw;
-  height: 50vh;
 }
 
 .footerNP {
@@ -117,14 +101,14 @@
 }
 
 .carousel {
-  width: 60vw;
-  height: 80vh;
+  width: 40vw;
+  height: 40vw;
 }
 
 .carousel-item img {
   display: inline-block;
-  width: 50vh;
-  height: 90vh;
+  width: 40vw;
+  height: 40vw;
 }
 
 .footerGaleria {
@@ -156,6 +140,62 @@ input:focus, textarea:focus {
   top: 130vh;
 }
 
+@media screen and (max-width: 320px) {
+  body {
+    width: 100vw;
+  }
+
+  .carousel {
+    width: 90vw;
+    height: 90vw;
+    top: 5vh;
+  }
+
+  .carousel-item img {
+    display: inline-block;
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .mainNuestrosProductos section {
+    display: flex;
+    flex-direction: column;
+    height: 450vh;
+  }
+  .mainNuestrosProductos img {
+    width: 70vw;
+    height: 70vw;
+  }
+  .mainNuestrosProductos .borlas, .mainNuestrosProductos section .platosDeSitio, .mainNuestrosProductos section .centrosDeMesa {
+    bottom: 0px;
+  }
+  .mainNuestrosProductos .borlas, .mainNuestrosProductos section .platosDeSitio, .mainNuestrosProductos section .centrosDeMesa, .mainNuestrosProductos .platosDeSitio, .mainNuestrosProductos .centrosDeMesa {
+    display: flex;
+    flex-direction: column;
+    height: 140vh;
+    align-items: center;
+  }
+
+  .redes {
+    flex-direction: column;
+    width: 48px;
+    right: 0px;
+    align-items: end;
+  }
+
+  .footerNP {
+    top: 10vh;
+  }
+
+  .footerContactanos {
+    top: 40vh;
+  }
+
+  .footerGaleria {
+    position: relative;
+    top: 40vh;
+  }
+}
 /*normalize*/
 * {
   padding: 0px;
@@ -177,13 +217,17 @@ a {
 }
 
 /* header y nav */
+.navColor {
+  background-color: blueviolet;
+}
+
 .linkNav {
   background-color: rgba(196, 152, 103, 0.7);
   border: solid 1px rgb(212, 212, 212);
   border-radius: 20px;
   margin: 10px 20px 0px 20px;
   padding: 2px 7px 2px 7px;
-  height: 7vh;
+  height: 40px;
 }
 .linkNav:hover {
   transform: scale(1.2, 1.2);
@@ -226,6 +270,10 @@ a {
 }
 .redes .instagram {
   background-color: #C13584;
+}
+.redes a {
+  width: 48px;
+  height: 48px;
 }
 
 /* footer */
