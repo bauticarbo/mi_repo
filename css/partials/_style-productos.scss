@@ -22,7 +22,6 @@
             grid-area: borlas;
             display: flex;
             justify-content:space-around;
-            //position: relative;
             @include sizes(100vw, 50vh);
             img{
                 margin-top: 20px;

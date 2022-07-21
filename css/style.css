@@ -130,6 +130,12 @@
   justify-content: center;
   align-content: center;
 }
+.mainContactanos .inputContactanos {
+  margin: 30px;
+}
+.mainContactanos legend {
+  margin-bottom: 35px;
+}
 
 input:focus, textarea:focus {
   transform: scale(1.05, 1.05);
@@ -140,57 +146,50 @@ input:focus, textarea:focus {
   top: 130vh;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 420px) {
   body {
     width: 100vw;
+    overflow-x: hidden;
   }
-
   .carousel {
     width: 90vw;
     height: 90vw;
     top: 5vh;
   }
-
   .carousel-item img {
     display: inline-block;
     width: 90vw;
     height: 90vw;
   }
-
-  .mainNuestrosProductos section {
-    display: flex;
-    flex-direction: column;
-    height: 450vh;
-  }
   .mainNuestrosProductos img {
     width: 70vw;
     height: 70vw;
   }
-  .mainNuestrosProductos .borlas, .mainNuestrosProductos section .platosDeSitio, .mainNuestrosProductos section .centrosDeMesa {
-    bottom: 0px;
-  }
-  .mainNuestrosProductos .borlas, .mainNuestrosProductos section .platosDeSitio, .mainNuestrosProductos section .centrosDeMesa, .mainNuestrosProductos .platosDeSitio, .mainNuestrosProductos .centrosDeMesa {
+  .mainNuestrosProductos section {
     display: flex;
     flex-direction: column;
-    height: 140vh;
+    height: 700vw;
+    justify-content: space-around;
+  }
+  .mainNuestrosProductos section article {
+    display: flex;
+    flex-direction: column;
+    height: 233vw;
     align-items: center;
   }
-
   .redes {
     flex-direction: column;
     width: 48px;
     right: 0px;
     align-items: end;
+    margin-right: 20px;
   }
-
   .footerNP {
-    top: 10vh;
-  }
-
-  .footerContactanos {
     top: 40vh;
   }
-
+  .footerContactanos {
+    top: 155vh;
+  }
   .footerGaleria {
     position: relative;
     top: 40vh;
@@ -230,11 +229,11 @@ a {
   height: 40px;
 }
 .linkNav:hover {
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
   background-color: rgba(139, 95, 44, 0.7);
 }
 .linkNav:active {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.05, 1.05);
 }
 
 .linkActual {

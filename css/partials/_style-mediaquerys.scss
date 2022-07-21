@@ -1,9 +1,10 @@
 @import "mixins";
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:420px) {
 
     body{
         width: 100vw;
+        overflow-x: hidden;
     }
     .carousel{
         @include sizes(90vw, 90vw);
@@ -17,22 +18,20 @@
     }
 
     .mainNuestrosProductos{
-        section{
-            display: flex;
-            flex-direction: column;
-            height: 450vh;
-        }
         img{
             @include sizes(70vw, 70vw);
         }
-        .borlas{
-            bottom: 0px;
-        }
-        .borlas, .platosDeSitio, .centrosDeMesa{
+        section{
             display: flex;
-            flex-direction: column;     
-            height: 140vh;
-            align-items: center;
+            flex-direction: column;
+            height: 700vw;
+            justify-content: space-around;
+            article{
+                display: flex;
+                flex-direction: column;
+                height: 233vw;
+                align-items: center;
+            }
         }
     }
 
@@ -41,13 +40,14 @@
         width: 48px;
         right: 0px;
         align-items: end;
+        margin-right: 20px;
     }
 
     .footerNP{
-        top: 10vh;
+        top: 40vh;
     }
     .footerContactanos{
-        top: 40vh;
+        top: 155vh;
     }
     .footerGaleria{
      position: relative;
